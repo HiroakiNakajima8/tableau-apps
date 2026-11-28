@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One Night on Dango-zaka - Chichibu Night Festival</title>
+<link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+<div id="app">
+  <div id="stage">
+    <div id="view">
+      <canvas id="scene"></canvas>
+      <header id="title">
+        <h1>One Night on Dango-zaka</h1>
+        <p class="sub">Chichibu Night Festival &middot; 3 December, 18:00&ndash;01:10 &middot; six floats climb into the winter night</p>
+        <p class="hint">Click a float to meet it &middot; drag the timeline to travel through the night</p>
+      </header>
+      <div id="hud">
+        <div id="clock">20:20</div>
+        <div id="caption"></div>
+        <div id="speedBadge"></div>
+      </div>
+      <aside id="card" aria-hidden="true">
+        <button id="cardClose" title="Close (Esc)" aria-label="Close">&times;</button>
+        <div class="kicker" id="cardKicker"></div>
+        <h2 id="cardName"></h2>
+        <div id="cardStatus"></div>
+        <dl id="cardFacts"></dl>
+        <p id="cardDesc"></p>
+        <p id="cardHigh"></p>
+        <div class="cardBtns">
+          <button id="cardClimb"></button>
+          <button id="cardDescend"></button>
+        </div>
+      </aside>
+      <div id="loading">Lighting the lanterns&hellip;</div>
+    </div>
+  </div>
+  <footer id="bar">
+    <div id="controls">
+      <button id="play" title="Play / pause (Space)" aria-label="Play or pause">&#10074;&#10074;</button>
+      <div id="speeds" role="group" aria-label="Speed">
+        <button data-s="auto" class="on" title="Fast through the quiet hours, slow motion on the slope">Auto</button>
+        <button data-s="1">&times;1</button>
+        <button data-s="10">&times;10</button>
+        <button data-s="60">&times;60</button>
+        <button data-s="300">&times;300</button>
+      </div>
+      <button id="nextClimb" title="Jump to the next climb">Next climb &#9656;</button>
+      <div id="chips" aria-label="Floats"></div>
+    </div>
+    <div id="timeline">
+      <div id="tlTrack"></div>
+      <div id="tlHead"><span></span></div>
+      <div id="tlTip"></div>
+    </div>
+    <div id="credit">Times are estimates from the Chichibu City timetable, Mapple, All About and Walkerplus &middot; Stars: HYG v3.8 for Chichibu, 3 Dec 2026 &middot; Created by Manbow Nakajima</div>
+  </footer>
+</div>
+<script src="src/app.js"></script>
+</body>
+</html>
